@@ -12,12 +12,10 @@ public class Main {
                 new Truck("truck1", 6),
                 new Truck("truck2", 8),
         };
-
         ServiceStation station = new ServiceStation();
-        station.check((Mainenance) transports[0]);
-        station.check((Mainenance) transports[2]);
-        station.check((Mainenance) transports[4]);
-        station.check((Mainenance) transports[1], (Mainenance) transports[3]);
-        station.check((Mainenance) transports[1], (Mainenance) transports[3], (Mainenance) transports[5]);
+
+        for (int i = 0; i < transports.length; i++) {
+            station.check((Mainenance) transports[i]);
+        }
     }
 }
